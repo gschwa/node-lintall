@@ -1,6 +1,6 @@
 {
-  "name": "node-linter",
-  "version": "1.0.0",
+  "name": "linter",
+  "version": "1.0.1",
   "description": "Run JSHint programmatically",
   "keywords": [
     "JSHint",
