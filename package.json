@@ -1,0 +1,26 @@
+{
+  "name": "node-linter",
+  "version": "1.0.0",
+  "description": "Run JSHint programmatically",
+  "keywords": [
+    "JSHint",
+    "lint"
+  ],
+  "bin": {
+    "linter": "./bin/linter"
+  },
+  "dependencies": {
+    "underscore": "1.6.0",
+    "jshint": "2.5.0",
+    "commander": "2.2.0",
+    "colors": "0.6.2",
+    "buster-glob": "0.3.3",
+    "debug": "*",
+    "pluralize": "0.0.9"
+  },
+  "author": "Gary Schwartzbard",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gschwa/node-linter.git"
+  }
+}
