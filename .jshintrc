@@ -3,8 +3,6 @@
   ],
 
   "node" : true,
-  "browser" : true,
-  "jquery" : true,
   "camelcase" : true,
   "indent" : 2,
   "boss" : false,
