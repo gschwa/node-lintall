@@ -1,0 +1,66 @@
+#!/usr/bin/env node
+
+var program = require('commander')
+  , path = require('path')
+  , fs = require('fs')
+  , Lint = require('../lib/lint')
+  , _ = require('underscore')
+  , lint = new Lint();
+
+program
+  .version('0.0.1')
+  .usage('[globs]')
+  .description('Lints the code using JSHint.')
+  .option('-c, --color [mode]', "Either 'browser', 'console', or 'none'. Defaults to 'console'", 'console')
+  .parse(process.argv);
+
+var jshintSettings;
+
+// make sure there is .jshintrc file
+if (fs.existsSync('.jshintrc')) {
+  try {
+    jshintSettings = JSON.parse(fs.readFileSync('.jshintrc', "utf-8"));
+  } catch (e) {
+    console.log("Unable to parse .jshintrc: %s".red, e.message);
+    process.exit(1);
+  }
+} else {
+  console.log(".jshintrc is required".red);
+  process.exit(1);
+}
+
+// add 'done' handler to print report
+lint.on("done", function () {
+  console.log(lint.report());
+
+  if (lint.hasErrors())
+    process.exit(1);
+});
+
+// get the command line globs
+var globs = program.parseOptions(process.argv).args.slice(2);
+
+if (_.isEmpty(globs)) {
+
+  // check for .linterrc file
+  if (fs.existsSync('.linterrc')) {
+    globs = fs.readFileSync('.linterrc', "utf-8").split(" ");
+  } else {
+    console.log("No globs specified. Either provide them on the command line or specify them in a .linterrc file".red);
+    process.exit(1);
+  }
+}
+
+lint.globs(globs, jshintSettings, {colorMode: program.color});
+
+
+
+
+
+
+
+
+
+
+
+

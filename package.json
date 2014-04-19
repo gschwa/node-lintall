@@ -1,0 +1,21 @@
+{
+  "name": "node-linter",
+  "version": "0.0.1",
+  "description": "Run JSHint programmatically",
+  "main": "index.js",
+  "bin": {
+    "linter": "./bin/linter"
+  },
+  "dependencies": {
+    "underscore": "1.6.x",
+    "jshint": "2.5.x",
+    "commander": "2.2.x",
+    "colors": "0.6.x",
+    "buster-glob": "0.3.x",
+    "debug": "*",
+    "pluralize": "0.0.9"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
