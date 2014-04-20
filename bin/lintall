@@ -42,11 +42,11 @@ var globs = program.parseOptions(process.argv).args.slice(2);
 
 if (_.isEmpty(globs)) {
 
-  // check for .linterrc file
-  if (fs.existsSync('.linterrc')) {
-    globs = fs.readFileSync('.linterrc', "utf-8").split(" ");
+  // check for .lintallrc file
+  if (fs.existsSync('.lintallrc')) {
+    globs = fs.readFileSync('.lintallrc', "utf-8").split(" ");
   } else {
-    console.log("No globs specified. Either provide them on the command line or specify them in a .linterrc file".red);
+    console.log("No globs specified. Either provide them on the command line or specify them in a .lintallrc file".red);
     process.exit(1);
   }
 }
