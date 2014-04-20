@@ -1,5 +1,5 @@
 {
-  "name": "linter",
+  "name": "lintall",
   "version": "1.0.1",
   "description": "Run JSHint programmatically",
   "keywords": [
@@ -7,7 +7,7 @@
     "lint"
   ],
   "bin": {
-    "linter": "./bin/linter"
+    "lintall": "./bin/lintall"
   },
   "dependencies": {
     "underscore": "1.6.0",
@@ -21,6 +21,6 @@
   "author": "Gary Schwartzbard",
   "repository": {
     "type": "git",
-    "url": "https://github.com/gschwa/node-linter.git"
+    "url": "https://github.com/gschwa/node-lintall.git"
   }
 }
