@@ -14,9 +14,11 @@ npm install -g lintall
 1. Place a `.jshintrc` file in the root of your project with your preferred settings
 2. Place a `.lintallrc` file in the root with a space delimited list of globs
 
-*Example .lintallrc file:*
+Example `.lintallrc` file:
 
-`bin/main.js lib/**/*.js config/*.js`
+```
+bin/main.js lib/**/*.js config/*.js
+````
 
 * `bin/main.js`: Only main.js in the bin directory
 * `lib/**/*.js`: All js files in the lib directory as well as all sub-directories
@@ -27,7 +29,17 @@ npm install -g lintall
 lintall
 ```
 
-With no colors in the output: `lintall -c none`
+With no colors in the output: 
+```
+lintall -c none
+```
+
+Lint a specific file or a glob of files:
+```
+lintall lib/foo.js lib/bar.js
+lintall lib/*.js
+lintall lib/**/*.js
+```
 
 ## Git Pre-Commit Hook
 
