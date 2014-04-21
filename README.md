@@ -48,7 +48,6 @@ mocha
 Coverage:
 ```
 npm run-script coverage
-open coverage/lcov-report/index.html
 ```
 
 ## License

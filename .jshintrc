@@ -1,5 +1,9 @@
 {
   "predef": [
+    "describe",
+    "before",
+    "after",
+    "it"
   ],
 
   "node" : true,

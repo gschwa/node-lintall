@@ -8,6 +8,7 @@ var should = require('chai').should()
 
 var jshintSettings = {
   "predef": [
+
   ],
 
   "node" : true,
@@ -48,7 +49,7 @@ describe("Lint", function () {
     sinon.stub(fs, "lstatSync", function () {
       return {
         isFile: function () { return true; }
-      }
+      };
     });
 
     readFileStub = sinon.stub(fs, "readFileSync");
@@ -88,4 +89,4 @@ describe("Lint", function () {
 
     lint.globs(["test/index.js"], jshintSettings);
   });
-})
+});
