@@ -27,7 +27,17 @@ npm install -g lintall
 lintall
 ```
 
-With no colors in the output: `lintall -c none`
+With no colors in the output: 
+```
+lintall -c none
+```
+
+Lint a specific file or a glob of files:
+```
+lintall lib/foo.js lib/bar.js
+lintall lib/*.js
+lintall lib/**/*.js
+```
 
 ## Git Pre-Commit Hook
 
