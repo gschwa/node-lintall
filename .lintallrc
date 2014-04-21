@@ -1,1 +1,1 @@
-lib/**/*.js bin/lintall
+lib/**/*.js bin/lintall test/**/*.js
