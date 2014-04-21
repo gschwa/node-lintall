@@ -40,6 +40,17 @@ set -x
 /usr/local/bin/node /usr/local/bin/lintall -c none
 ```
 
+## Test
+```
+mocha
+```
+
+Coverage:
+```
+npm run-script coverage
+open coverage/lcov-report/index.html
+```
+
 ## License
 MIT
 

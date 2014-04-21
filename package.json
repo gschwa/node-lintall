@@ -9,6 +9,10 @@
   "bin": {
     "lintall": "./bin/lintall"
   },
+  "scripts": {
+    "test": "mocha",
+    "coverage": "node_modules/istanbul/lib/cli.js cover node_modules/mocha/bin/_mocha -- -R spec"
+  },
   "dependencies": {
     "underscore": "1.6.0",
     "jshint": "2.5.0",
@@ -22,5 +26,11 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/gschwa/node-lintall.git"
+  },
+  "devDependencies": {
+    "mocha": "^1.18.2",
+    "chai": "^1.9.1",
+    "sinon": "^1.9.1",
+    "istanbul": "^0.2.7"
   }
 }

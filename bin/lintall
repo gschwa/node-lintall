@@ -31,7 +31,7 @@ if (fs.existsSync('.jshintrc')) {
 
 // add 'done' handler to print report
 lint.on("done", function () {
-  console.log(lint.report());
+  console.log(lint.report().join("\n"));
 
   if (lint.hasErrors())
     process.exit(1);
